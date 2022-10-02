@@ -35,16 +35,16 @@ def func(message):
 
     elif (message.text == "/help"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Как меня зовут?")
-        btn2 = types.KeyboardButton("Что я могу?")
+        btn1 = types.KeyboardButton("Как тебя зовут?")
+        btn2 = types.KeyboardButton("Что ты можешь?")
         back = types.KeyboardButton("Вернуться в главное меню")
         markup.add(btn1, btn2, back)
         bot.send_message(message.chat.id, text="Задай мне вопрос", reply_markup=markup)
 
-    elif (message.text == "Как меня зовут?"):
+    elif (message.text == "Как тебя зовут?"):
         bot.send_message(message.chat.id, "У меня нет имени..")
 
-    elif message.text == "Что я могу?":
+    elif message.text == "Что ты можешь?":
         bot.send_message(message.chat.id, text="Выбрать тебе собеседника ☕️")
 
     elif (message.text == "Вернуться в главное меню"):
